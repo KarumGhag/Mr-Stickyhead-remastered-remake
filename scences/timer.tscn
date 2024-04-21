@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://dk3x0gi3pgjae"]
+
+[ext_resource type="Script" path="res://scripts/timer.gd" id="1_t0btb"]
+
+[node name="Timer" type="Node2D" node_paths=PackedStringArray("totalTimeLabel", "currentTimeLabel", "splitsTimeLabel")]
+script = ExtResource("1_t0btb")
+totalTimeLabel = NodePath("CanvasLayer/totalTime")
+currentTimeLabel = NodePath("CanvasLayer/currentTime")
+splitsTimeLabel = NodePath("CanvasLayer/splitsTime")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="totalTime" type="Label" parent="CanvasLayer"]
+offset_right = 90.0
+offset_bottom = 23.0
+text = "Total Time: "
+
+[node name="currentTime" type="Label" parent="CanvasLayer"]
+offset_left = 212.0
+offset_right = 299.0
+offset_bottom = 23.0
+text = "Level Time:"
+
+[node name="splitsTime" type="Label" parent="CanvasLayer"]
+offset_top = 25.0
+offset_right = 51.0
+offset_bottom = 48.0
+text = "Splits: "

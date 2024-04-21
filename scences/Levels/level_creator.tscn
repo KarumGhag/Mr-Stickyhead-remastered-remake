@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbqhhnvy7d76v"]
+
+[ext_resource type="Texture2D" uid="uid://ca7tdk5y2km4s" path="res://art/square.png" id="1_ac51k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t27a5"]
+size = Vector2(18, 18)
+
+[node name="LevelCreator" type="Sprite2D"]
+modulate = Color(0, 0, 0, 1)
+texture = ExtResource("1_ac51k")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+scale = Vector2(1.05, 1.05)
+shape = SubResource("RectangleShape2D_t27a5")
