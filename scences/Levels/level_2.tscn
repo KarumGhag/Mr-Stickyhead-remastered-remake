@@ -1,0 +1,104 @@
+[gd_scene load_steps=7 format=3 uid="uid://8jarjhaclnv4"]
+
+[ext_resource type="PackedScene" uid="uid://cbqhhnvy7d76v" path="res://scences/Levels/level_creator.tscn" id="1_cjdx2"]
+[ext_resource type="PackedScene" uid="uid://iw3e4f4utkm2" path="res://scences/objects/bounce_pad.tscn" id="2_1w670"]
+[ext_resource type="PackedScene" uid="uid://cw1ck5107083a" path="res://scences/player.tscn" id="2_a0glf"]
+[ext_resource type="PackedScene" uid="uid://0uetm0qvivg1" path="res://scences/spawn_point.tscn" id="3_2xf5a"]
+[ext_resource type="PackedScene" uid="uid://h48gs52i84ga" path="res://scences/objects/spikes.tscn" id="5_j7blr"]
+[ext_resource type="PackedScene" uid="uid://bxaiavlxnib70" path="res://scences/objects/flag.tscn" id="6_sac3g"]
+
+[node name="level_2" type="Node2D"]
+
+[node name="SpawnPoint" parent="." instance=ExtResource("3_2xf5a")]
+position = Vector2(400, 513)
+
+[node name="Player" parent="." instance=ExtResource("2_a0glf")]
+position = Vector2(468, 501)
+
+[node name="Walls" type="Node" parent="."]
+
+[node name="LevelCreator" parent="Walls" instance=ExtResource("1_cjdx2")]
+position = Vector2(572.5, 633.551)
+scale = Vector2(61.1842, 2.5)
+
+[node name="LevelCreator2" parent="Walls" instance=ExtResource("1_cjdx2")]
+position = Vector2(570.75, 16.0256)
+scale = Vector2(61.1842, 3.9973)
+
+[node name="LevelCreator3" parent="Walls" instance=ExtResource("1_cjdx2")]
+position = Vector2(0.749985, 317.788)
+rotation = 1.5708
+scale = Vector2(35.7571, 2.5)
+
+[node name="LevelCreator4" parent="Walls" instance=ExtResource("1_cjdx2")]
+position = Vector2(1151.75, 317.695)
+rotation = 1.5708
+scale = Vector2(35.7573, 2.5)
+
+[node name="Floor" type="Node" parent="."]
+
+[node name="LevelCreator5" parent="Floor" instance=ExtResource("1_cjdx2")]
+position = Vector2(254, 382)
+scale = Vector2(12.4013, 0.940789)
+
+[node name="LevelCreator6" parent="Floor" instance=ExtResource("1_cjdx2")]
+position = Vector2(740.594, 144.031)
+scale = Vector2(42.0428, 2.62829)
+
+[node name="LevelCreator7" parent="Floor" instance=ExtResource("1_cjdx2")]
+position = Vector2(915, 435.705)
+rotation = 1.5708
+scale = Vector2(21.1887, 0.940789)
+
+[node name="Bounces" type="Node" parent="."]
+
+[node name="bounce pad" parent="Bounces" instance=ExtResource("2_1w670")]
+position = Vector2(140, 583)
+
+[node name="bounce pad2" parent="Bounces" instance=ExtResource("2_1w670")]
+position = Vector2(340, 353)
+
+[node name="Spikes" type="Node" parent="."]
+
+[node name="Spikes" parent="Spikes" instance=ExtResource("5_j7blr")]
+position = Vector2(392, 124)
+
+[node name="Spikes4" parent="Spikes" instance=ExtResource("5_j7blr")]
+position = Vector2(333, 143)
+rotation = -1.57079
+
+[node name="Spikes2" parent="Spikes" instance=ExtResource("5_j7blr")]
+position = Vector2(659, 121)
+
+[node name="Spikes5" parent="Spikes" instance=ExtResource("5_j7blr")]
+position = Vector2(712, 47)
+rotation = 3.14159
+
+[node name="Spikes6" parent="Spikes" instance=ExtResource("5_j7blr")]
+position = Vector2(809, 126)
+
+[node name="Spikes11" parent="Spikes" instance=ExtResource("5_j7blr")]
+position = Vector2(1015, 51)
+rotation = -3.14159
+
+[node name="Spikes7" parent="Spikes" instance=ExtResource("5_j7blr")]
+position = Vector2(951, 598)
+
+[node name="Spikes8" parent="Spikes" instance=ExtResource("5_j7blr")]
+position = Vector2(977, 598)
+
+[node name="Spikes9" parent="Spikes" instance=ExtResource("5_j7blr")]
+position = Vector2(1108, 599)
+
+[node name="Spikes10" parent="Spikes" instance=ExtResource("5_j7blr")]
+position = Vector2(1077, 599)
+
+[node name="Spikes3" parent="Spikes" instance=ExtResource("5_j7blr")]
+position = Vector2(546, 44)
+rotation = -3.14159
+
+[node name="Flag" parent="Spikes" instance=ExtResource("6_sac3g")]
+position = Vector2(1029, 592)
+
+[node name="Flag" parent="." instance=ExtResource("6_sac3g")]
+position = Vector2(1065, 103)

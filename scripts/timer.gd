@@ -16,9 +16,12 @@ var currentPassed : String = ""
 var savedTime : float
 var splitsTxt : String
 
+func _ready():
+	hide()
 
 func startTimer():
 	gameStarted = true
+	show()
 
 func _process(delta):
 	if gameStarted:
