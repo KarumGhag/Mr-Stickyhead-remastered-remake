@@ -85,7 +85,7 @@ func _physics_process(delta):
 		velocity.y = jumpPower - (abs(velocity.x) / 10)
 		
 
-	print(canCayote)
+	
 	if velocity.y < 0 and Input.is_action_just_released("jump"):
 		velocity.y /= 1.5
 		
