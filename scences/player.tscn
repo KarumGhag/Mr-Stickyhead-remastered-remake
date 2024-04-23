@@ -76,14 +76,15 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nnfxe"]
-height = 52.0
+height = 46.0
 
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("stickTimer")]
 script = ExtResource("1_0n1p7")
-speed = 350.0
+speed = 400.0
 acceleration = 13.0
 stickTime = 0.5
 stickTimer = NodePath("StickTimer")
+cayoteMaxTime = 0.2
 
 [node name="PlayerAnimations" type="AnimatedSprite2D" parent="." node_paths=PackedStringArray("player")]
 sprite_frames = SubResource("SpriteFrames_6m18u")

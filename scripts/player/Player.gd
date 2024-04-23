@@ -55,7 +55,7 @@ func _physics_process(delta):
 	if cayoteTimeToggle:
 		canCayote = true
 		cayoteTimeLeft -= delta
-
+	
 	if cayoteTimeLeft <= 0:
 		canCayote = false
 
@@ -85,7 +85,7 @@ func _physics_process(delta):
 		velocity.y = jumpPower - (abs(velocity.x) / 10)
 		
 
-
+	print(canCayote)
 	if velocity.y < 0 and Input.is_action_just_released("jump"):
 		velocity.y /= 1.5
 		
@@ -96,7 +96,7 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, friction)
 
 	move_and_slide()
-
+	
 
 
 func _on_stick_timer_timeout():

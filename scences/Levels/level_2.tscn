@@ -56,7 +56,7 @@ scale = Vector2(21.1887, 0.940789)
 position = Vector2(140, 583)
 
 [node name="bounce pad2" parent="Bounces" instance=ExtResource("2_1w670")]
-position = Vector2(340, 353)
+position = Vector2(261, 351)
 
 [node name="Spikes" type="Node" parent="."]
 
