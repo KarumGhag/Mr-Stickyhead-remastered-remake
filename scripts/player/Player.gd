@@ -94,6 +94,13 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, direction * speed, acceleration)
 	else:
 		velocity.x = move_toward(velocity.x, 0, friction)
+		
+	if Input.is_action_just_pressed("test"):
+		var levelName : String = "res://scences/levels/level_"
+		var currentScene = get_tree().current_scene.scene_file_path
+		var nextLevel = currentScene.to_int() + 1
+		var nextLevelPath = levelName + str(nextLevel) + ".tscn"
+		get_tree().change_scene_to_file(nextLevelPath)
 
 	move_and_slide()
 	
