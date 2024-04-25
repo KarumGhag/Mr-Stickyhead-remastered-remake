@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cm648opybn7ra"]
 
-[ext_resource type="PackedScene" uid="uid://cbqhhnvy7d76v" path="res://scences/Levels/level_creator.tscn" id="1_ug44i"]
+[ext_resource type="PackedScene" uid="uid://cbqhhnvy7d76v" path="res://scences/levels/level_creator.tscn" id="1_ug44i"]
 [ext_resource type="PackedScene" uid="uid://0uetm0qvivg1" path="res://scences/spawn_point.tscn" id="2_n78sq"]
 [ext_resource type="PackedScene" uid="uid://cw1ck5107083a" path="res://scences/player.tscn" id="3_wi618"]
 [ext_resource type="PackedScene" uid="uid://bxaiavlxnib70" path="res://scences/objects/flag.tscn" id="4_v0q12"]
@@ -35,12 +35,12 @@ scale = Vector2(35.7573, 2.5)
 [node name="Floor" type="Node" parent="."]
 
 [node name="LevelCreator5" parent="Floor" instance=ExtResource("1_ug44i")]
-position = Vector2(397, 446)
-scale = Vector2(12.4013, 0.940789)
+position = Vector2(376.625, 455)
+scale = Vector2(17.2237, 0.940789)
 
 [node name="LevelCreator6" parent="Floor" instance=ExtResource("1_ug44i")]
-position = Vector2(631, 246)
-scale = Vector2(9.32894, 1.77632)
+position = Vector2(658.812, 267.469)
+scale = Vector2(8.29605, 1.10197)
 
 [node name="LevelCreator7" parent="Floor" instance=ExtResource("1_ug44i")]
 position = Vector2(953.812, 146)
@@ -56,4 +56,16 @@ position = Vector2(169, 505)
 position = Vector2(1046.25, 112.199)
 
 [node name="Spikes" parent="." instance=ExtResource("5_k8jtp")]
-position = Vector2(332.25, 601.199)
+position = Vector2(471.25, 599.199)
+
+[node name="Spikes2" parent="." instance=ExtResource("5_k8jtp")]
+position = Vector2(347.25, 598.199)
+
+[node name="Spikes3" parent="." instance=ExtResource("5_k8jtp")]
+position = Vector2(387.25, 598.199)
+
+[node name="Spikes4" parent="." instance=ExtResource("5_k8jtp")]
+position = Vector2(444.25, 599.199)
+
+[node name="Spikes5" parent="." instance=ExtResource("5_k8jtp")]
+position = Vector2(410.25, 599.199)

@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://0uetm0qvivg1" path="res://scences/spawn_point.tscn" id="1_l8swe"]
 [ext_resource type="PackedScene" uid="uid://cw1ck5107083a" path="res://scences/player.tscn" id="2_oo8es"]
 [ext_resource type="PackedScene" uid="uid://bxaiavlxnib70" path="res://scences/objects/flag.tscn" id="3_shyfp"]
-[ext_resource type="PackedScene" uid="uid://cbqhhnvy7d76v" path="res://scences/Levels/level_creator.tscn" id="4_3su1c"]
+[ext_resource type="PackedScene" uid="uid://cbqhhnvy7d76v" path="res://scences/levels/level_creator.tscn" id="4_3su1c"]
 [ext_resource type="PackedScene" uid="uid://iw3e4f4utkm2" path="res://scences/objects/bounce_pad.tscn" id="5_kcw76"]
 [ext_resource type="PackedScene" uid="uid://h48gs52i84ga" path="res://scences/objects/spikes.tscn" id="6_f8xro"]
 
