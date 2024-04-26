@@ -61,6 +61,9 @@ position = Vector2(471.25, 599.199)
 [node name="Spikes2" parent="." instance=ExtResource("5_k8jtp")]
 position = Vector2(347.25, 598.199)
 
+[node name="Spikes6" parent="." instance=ExtResource("5_k8jtp")]
+position = Vector2(262.25, 600.199)
+
 [node name="Spikes3" parent="." instance=ExtResource("5_k8jtp")]
 position = Vector2(387.25, 598.199)
 

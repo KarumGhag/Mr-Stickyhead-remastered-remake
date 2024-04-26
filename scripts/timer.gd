@@ -17,11 +17,15 @@ var savedTime : float
 var splitsTxt : String
 
 func _ready():
-	hide()
+	totalTimeLabel.hide()
+	currentTimeLabel.hide()
+	splitsTimeLabel.hide()
 
 func startTimer():
 	gameStarted = true
-	show()
+	totalTimeLabel.show()
+	currentTimeLabel.show()
+	splitsTimeLabel.show()
 
 func _process(delta):
 	if gameStarted:

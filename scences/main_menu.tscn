@@ -1,0 +1,106 @@
+[gd_scene load_steps=6 format=3 uid="uid://d0f3u6jra51rw"]
+
+[ext_resource type="Texture2D" uid="uid://d2h7xhm2pl7xi" path="res://art/Final StartUp.png" id="1_cvkv4"]
+[ext_resource type="Script" path="res://scripts/startUp.gd" id="1_ph8fg"]
+[ext_resource type="AudioStream" uid="uid://dytppsdmg2mu6" path="res://art/sounds/start up.wav" id="3_pbomx"]
+[ext_resource type="PackedScene" uid="uid://cbqhhnvy7d76v" path="res://scences/levels/level_creator.tscn" id="4_wvbdk"]
+[ext_resource type="Texture2D" uid="uid://bjfmb3a6oqwn7" path="res://art/player/jump.png" id="5_px4tt"]
+
+[node name="Main Menu" type="Node2D" node_paths=PackedStringArray("startUpBlack", "startUpSprite", "sound", "skip", "mainMenuNode", "button", "playerSprite", "canvasLayer")]
+script = ExtResource("1_ph8fg")
+startUpBlack = NodePath("StartUp/Polygon2D")
+startUpSprite = NodePath("StartUp/FinalStartUp")
+sound = NodePath("StartUp/AudioStreamPlayer2D")
+skip = NodePath("StartUp/CanvasLayer/SkipLabel")
+mainMenuNode = NodePath("MainMenuScreen")
+button = NodePath("MainMenuScreen/Button")
+playerSprite = NodePath("Jump")
+canvasLayer = NodePath("MainMenuScreen/MainMenu")
+
+[node name="StartUp" type="Node2D" parent="."]
+
+[node name="Polygon2D" type="Polygon2D" parent="StartUp"]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-7, -4, 1150, -2, 1152, 653, -1, 649)
+
+[node name="FinalStartUp" type="Sprite2D" parent="StartUp"]
+position = Vector2(575, 264)
+scale = Vector2(0.939286, 0.963824)
+texture = ExtResource("1_cvkv4")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="StartUp"]
+stream = ExtResource("3_pbomx")
+autoplay = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="StartUp"]
+
+[node name="SkipLabel" type="Label" parent="StartUp/CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 458.0
+offset_top = 302.0
+offset_right = 569.0
+offset_bottom = 325.0
+text = "(space to skip)"
+
+[node name="ShowExit" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[node name="MainMenuScreen" type="Node2D" parent="."]
+
+[node name="MainMenu" type="CanvasLayer" parent="MainMenuScreen"]
+
+[node name="Title" type="Label" parent="MainMenuScreen/MainMenu"]
+offset_left = 36.0
+offset_top = 74.0
+offset_right = 1119.0
+offset_bottom = 211.0
+theme_override_font_sizes/font_size = 75
+text = "MR STICKYHEAD REMASTERED"
+metadata/_edit_use_anchors_ = true
+
+[node name="Walls" type="Node2D" parent="MainMenuScreen"]
+
+[node name="LevelCreator" parent="MainMenuScreen/Walls" instance=ExtResource("4_wvbdk")]
+position = Vector2(572.5, 633.551)
+scale = Vector2(61.1842, 2.5)
+
+[node name="LevelCreator5" parent="MainMenuScreen/Walls" instance=ExtResource("4_wvbdk")]
+position = Vector2(584, 195)
+scale = Vector2(61.1842, 2.5)
+
+[node name="LevelCreator2" parent="MainMenuScreen/Walls" instance=ExtResource("4_wvbdk")]
+position = Vector2(570.75, 16.0256)
+scale = Vector2(61.1842, 3.9973)
+
+[node name="LevelCreator3" parent="MainMenuScreen/Walls" instance=ExtResource("4_wvbdk")]
+position = Vector2(0.749985, 317.788)
+rotation = 1.5708
+scale = Vector2(35.7571, 2.5)
+
+[node name="LevelCreator4" parent="MainMenuScreen/Walls" instance=ExtResource("4_wvbdk")]
+position = Vector2(1151.75, 317.695)
+rotation = 1.5708
+scale = Vector2(35.7573, 2.5)
+
+[node name="Button" type="Button" parent="MainMenuScreen"]
+offset_left = 452.0
+offset_top = 358.0
+offset_right = 620.0
+offset_bottom = 478.0
+theme_override_font_sizes/font_size = 60
+text = "PLAY
+"
+
+[node name="Jump" type="Sprite2D" parent="."]
+position = Vector2(539, 281)
+scale = Vector2(3.1, 2.9898)
+texture = ExtResource("5_px4tt")
+
+[connection signal="finished" from="StartUp/AudioStreamPlayer2D" to="." method="_on_audio_stream_player_2d_finished"]
+[connection signal="timeout" from="ShowExit" to="." method="_on_show_exit_timeout"]
+[connection signal="button_down" from="MainMenuScreen/Button" to="." method="_on_button_button_down"]

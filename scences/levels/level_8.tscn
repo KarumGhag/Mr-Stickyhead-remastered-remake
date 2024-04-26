@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://iw3e4f4utkm2" path="res://scences/objects/bounce_pad.tscn" id="5_tw51q"]
 [ext_resource type="PackedScene" uid="uid://h48gs52i84ga" path="res://scences/objects/spikes.tscn" id="6_wjuwa"]
 
-[node name="levl_8" type="Node2D"]
+[node name="level_8" type="Node2D"]
 
 [node name="SpawnPoint" parent="." instance=ExtResource("1_54p6p")]
 position = Vector2(78, 540)
