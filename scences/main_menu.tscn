@@ -21,7 +21,7 @@ canvasLayer = NodePath("MainMenuScreen/MainMenu")
 
 [node name="Polygon2D" type="Polygon2D" parent="StartUp"]
 color = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(-7, -4, 1150, -2, 1152, 653, -1, 649)
+polygon = PackedVector2Array(-42, -72, 1360, -68, 1368, 687, -69, 698)
 
 [node name="FinalStartUp" type="Sprite2D" parent="StartUp"]
 position = Vector2(575, 264)
