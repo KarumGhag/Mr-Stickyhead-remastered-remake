@@ -41,15 +41,35 @@ scale = Vector2(35.7573, 2.5)
 [node name="Floor" type="Node" parent="."]
 
 [node name="LevelCreator5" parent="Floor" instance=ExtResource("4_26uyr")]
-position = Vector2(403, 445)
+position = Vector2(595.125, 425)
 scale = Vector2(12.2237, 2.5)
 
 [node name="Bounces" type="Node" parent="."]
 
 [node name="bounce pad" parent="Bounces" instance=ExtResource("5_6174g")]
-position = Vector2(294, 788)
+position = Vector2(204, 591)
+bounceBuffer = 100.0
+
+[node name="bounce pad2" parent="Bounces" instance=ExtResource("5_6174g")]
+position = Vector2(605.125, 381)
+bounceBuffer = 100.0
 
 [node name="Spikes" type="Node" parent="."]
 
 [node name="Spikes" parent="Spikes" instance=ExtResource("6_giv3i")]
-position = Vector2(444, 806)
+position = Vector2(288, 598)
+
+[node name="Spikes2" parent="Spikes" instance=ExtResource("6_giv3i")]
+position = Vector2(332, 598)
+
+[node name="Spikes3" parent="Spikes" instance=ExtResource("6_giv3i")]
+position = Vector2(360, 596)
+
+[node name="Spikes4" parent="Spikes" instance=ExtResource("6_giv3i")]
+position = Vector2(399, 599)
+
+[node name="Spikes5" parent="Spikes" instance=ExtResource("6_giv3i")]
+position = Vector2(443, 594)
+
+[node name="Spikes6" parent="Spikes" instance=ExtResource("6_giv3i")]
+position = Vector2(487, 597)
