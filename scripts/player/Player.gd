@@ -105,9 +105,12 @@ func _on_stick_timer_timeout():
 func kill():
 	global_position = spawnPoint.global_position
 
-func bounce():
+func bounce(bounceBuffer : float):
+
 	if velocity.y > 10:
-		velocity.y = ((velocity.y / 1.19) * -1) + (bounceVel / 2) - (abs(velocity.x / 2))
+		velocity.y = ((velocity.y / 1.19) * -1) + (bounceVel / 2) - (abs(velocity.x / 2)) + bounceBuffer
+		
 		return
 	else:
-		velocity.y = bounceVel - (abs(velocity.x / 2))
+		velocity.y = bounceVel - (abs(velocity.x / 2)) + bounceBuffer
+

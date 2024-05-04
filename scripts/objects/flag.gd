@@ -6,13 +6,15 @@ class_name Flag
 var levelName : String = "res://scences/levels/level_"
 
 @onready var globalTimer : Node = get_node("/root/GlobalTimer")
+@export var split : bool = true
 
 func _ready():
 	animator.play("Flying")
 
 func _on_area_2d_body_entered(body):
 	if body is Player:
-		globalTimer.saveTime()
+		if split:
+			globalTimer.saveTime()
 		call_deferred("change_level")
 
 func change_level():

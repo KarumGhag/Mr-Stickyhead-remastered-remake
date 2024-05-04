@@ -1,0 +1,109 @@
+[gd_scene load_steps=7 format=3 uid="uid://b2523jakuexyc"]
+
+[ext_resource type="PackedScene" uid="uid://0uetm0qvivg1" path="res://scences/spawn_point.tscn" id="1_mkobt"]
+[ext_resource type="PackedScene" uid="uid://cw1ck5107083a" path="res://scences/player.tscn" id="2_6bjqr"]
+[ext_resource type="PackedScene" uid="uid://bxaiavlxnib70" path="res://scences/objects/flag.tscn" id="3_v6nbh"]
+[ext_resource type="PackedScene" uid="uid://cbqhhnvy7d76v" path="res://scences/levels/level_creator.tscn" id="4_pbspg"]
+[ext_resource type="PackedScene" uid="uid://iw3e4f4utkm2" path="res://scences/objects/bounce_pad.tscn" id="5_6wtx7"]
+[ext_resource type="PackedScene" uid="uid://h48gs52i84ga" path="res://scences/objects/spikes.tscn" id="6_vswi2"]
+
+[node name="level_12" type="Node2D"]
+
+[node name="SpawnPoint" parent="." instance=ExtResource("1_mkobt")]
+position = Vector2(97, 516)
+
+[node name="Player" parent="." instance=ExtResource("2_6bjqr")]
+position = Vector2(46, 571)
+
+[node name="Flag" parent="." instance=ExtResource("3_v6nbh")]
+position = Vector2(-38, 345)
+split = false
+
+[node name="Walls" type="Node" parent="."]
+
+[node name="LevelCreator" parent="Walls" instance=ExtResource("4_pbspg")]
+position = Vector2(572.5, 633.551)
+scale = Vector2(61.1842, 2.5)
+
+[node name="LevelCreator2" parent="Walls" instance=ExtResource("4_pbspg")]
+position = Vector2(570.75, 16.0256)
+scale = Vector2(61.1842, 3.9973)
+
+[node name="LevelCreator3" parent="Walls" instance=ExtResource("4_pbspg")]
+position = Vector2(0.749241, 523.365)
+rotation = 1.5708
+scale = Vector2(14.1174, 2.5)
+
+[node name="LevelCreator5" parent="Walls" instance=ExtResource("4_pbspg")]
+position = Vector2(2, 140)
+rotation = 1.5708
+scale = Vector2(17.0746, 2.5)
+
+[node name="LevelCreator4" parent="Walls" instance=ExtResource("4_pbspg")]
+position = Vector2(1151.75, 317.695)
+rotation = 1.5708
+scale = Vector2(35.7573, 2.5)
+
+[node name="Floor" type="Node" parent="."]
+
+[node name="LevelCreator5" parent="Floor" instance=ExtResource("4_pbspg")]
+position = Vector2(620.5, 125.875)
+scale = Vector2(45.1053, 2.09211)
+
+[node name="LevelCreator10" parent="Floor" instance=ExtResource("4_pbspg")]
+position = Vector2(1072, 486)
+scale = Vector2(2.02633, 0.513158)
+
+[node name="LevelCreator11" parent="Floor" instance=ExtResource("4_pbspg")]
+position = Vector2(1133, 360)
+scale = Vector2(2.02633, 0.513158)
+
+[node name="LevelCreator12" parent="Floor" instance=ExtResource("4_pbspg")]
+position = Vector2(1077, 211)
+scale = Vector2(2.02633, 0.513158)
+
+[node name="LevelCreator13" parent="Floor" instance=ExtResource("4_pbspg")]
+position = Vector2(1126, 94)
+scale = Vector2(2.02633, 0.513158)
+
+[node name="LevelCreator8" parent="Floor" instance=ExtResource("4_pbspg")]
+position = Vector2(100, 426)
+scale = Vector2(12.1579, 1.72368)
+
+[node name="LevelCreator6" parent="Floor" instance=ExtResource("4_pbspg")]
+position = Vector2(193, 273.455)
+rotation = 1.57079
+scale = Vector2(17.6364, 2.5)
+
+[node name="LevelCreator7" parent="Floor" instance=ExtResource("4_pbspg")]
+position = Vector2(972, 434.133)
+rotation = 1.57079
+scale = Vector2(19.5758, 2.5)
+
+[node name="LevelCreator9" parent="Floor" instance=ExtResource("4_pbspg")]
+position = Vector2(1059, 318.5)
+rotation = 1.57079
+scale = Vector2(22.4079, 1.07894)
+
+[node name="Bounces" type="Node" parent="."]
+
+[node name="bounce pad" parent="Bounces" instance=ExtResource("5_6wtx7")]
+position = Vector2(530, 586)
+
+[node name="Spikes" type="Node" parent="."]
+
+[node name="Spikes2" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(426, 607)
+
+[node name="Spikes6" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(426, 607)
+
+[node name="Spikes3" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(196, 602)
+
+[node name="Spikes4" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(307, 603)
+
+[node name="Spikes5" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(615, 160)
+rotation = 3.14159

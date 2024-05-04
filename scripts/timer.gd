@@ -10,6 +10,7 @@ var splits : Array = []
 @export var currentTimeLabel : Label
 @export var splitsTimeLabel : Label
 
+
 var timePassed : String = ""
 var currentPassed : String = ""
 
@@ -26,6 +27,7 @@ func startTimer():
 	totalTimeLabel.show()
 	currentTimeLabel.show()
 	splitsTimeLabel.show()
+
 
 func _process(delta):
 	if gameStarted:
@@ -53,3 +55,4 @@ func saveTime():
 	savedTime = totalTime
 	splits.append(currentPassed)
 	splitsTxt += "|" + str(currentPassed) + "|"
+

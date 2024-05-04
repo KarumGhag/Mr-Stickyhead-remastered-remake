@@ -80,8 +80,8 @@ height = 46.0
 
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("stickTimer")]
 script = ExtResource("1_0n1p7")
-speed = 400.0
-acceleration = 13.0
+speed = 500.0
+defaultFriction = 14.0
 stickTime = 0.5
 stickTimer = NodePath("StickTimer")
 cayoteMaxTime = 0.2

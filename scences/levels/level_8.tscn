@@ -66,6 +66,7 @@ scale = Vector2(18.5803, 3.29712)
 
 [node name="bounce pad" parent="Bounces" instance=ExtResource("5_tw51q")]
 position = Vector2(305, 588)
+bounceBuffer = 60.0
 
 [node name="bounce pad2" parent="Bounces" instance=ExtResource("5_tw51q")]
 position = Vector2(1088, 585)

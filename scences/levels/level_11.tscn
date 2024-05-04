@@ -98,7 +98,7 @@ position = Vector2(891, 349)
 [node name="Spikes" type="Node" parent="."]
 
 [node name="Spikes" parent="Spikes" instance=ExtResource("6_2jyic")]
-position = Vector2(727, 612)
+position = Vector2(693, 608)
 
 [node name="Spikes13" parent="Spikes" instance=ExtResource("6_2jyic")]
 position = Vector2(863, 434)
@@ -128,7 +128,7 @@ position = Vector2(947, 137)
 rotation = -1.57079
 
 [node name="Spikes20" parent="Spikes" instance=ExtResource("6_2jyic")]
-position = Vector2(964, 104)
+position = Vector2(963, 120)
 
 [node name="Spikes2" parent="Spikes" instance=ExtResource("6_2jyic")]
 position = Vector2(174, 59)
@@ -167,7 +167,7 @@ position = Vector2(678, 125)
 rotation = -6.28318
 
 [node name="Spikes11" parent="Spikes" instance=ExtResource("6_2jyic")]
-position = Vector2(655, 479)
+position = Vector2(364, 476)
 rotation = -6.28318
 
 [node name="Spikes12" parent="Spikes" instance=ExtResource("6_2jyic")]

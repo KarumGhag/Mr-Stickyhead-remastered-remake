@@ -1,12 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://dk3x0gi3pgjae"]
+[gd_scene load_steps=3 format=3 uid="uid://dk3x0gi3pgjae"]
 
 [ext_resource type="Script" path="res://scripts/timer.gd" id="1_t0btb"]
+[ext_resource type="Script" path="res://scripts/splitShower.gd" id="2_j1yaw"]
 
-[node name="Timer" type="Node2D" node_paths=PackedStringArray("totalTimeLabel", "currentTimeLabel", "splitsTimeLabel")]
+[node name="Timer" type="Node2D" node_paths=PackedStringArray("totalTimeLabel", "currentTimeLabel", "splitsTimeLabel", "splitsShower")]
 script = ExtResource("1_t0btb")
 totalTimeLabel = NodePath("CanvasLayer/totalTime")
 currentTimeLabel = NodePath("CanvasLayer/currentTime")
 splitsTimeLabel = NodePath("CanvasLayer/splitsTime")
+splitsShower = NodePath("CanvasLayer/splitsShower")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -27,3 +29,11 @@ offset_top = 25.0
 offset_right = 51.0
 offset_bottom = 48.0
 text = "Splits: "
+
+[node name="splitsShower" type="Label" parent="CanvasLayer" node_paths=PackedStringArray("me")]
+offset_left = 369.0
+offset_right = 411.0
+offset_bottom = 23.0
+text = "Splits"
+script = ExtResource("2_j1yaw")
+me = NodePath(".")
