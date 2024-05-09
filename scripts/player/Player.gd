@@ -30,9 +30,11 @@ var canCayote : bool = false
 
 @export var bounceVel : float = jumpPower * 1.3
 
+
+
 func _ready():
 	spawnPoint = get_tree().get_first_node_in_group("SpawnPoint")
-	global_position = spawnPoint.global_position
+	global_position = spawnPoint.position
 	globalTimer.startTimer()
 	
 func _physics_process(delta):
@@ -114,3 +116,4 @@ func bounce(bounceBuffer : float):
 	else:
 		velocity.y = bounceVel - (abs(velocity.x / 2)) + bounceBuffer
 
+	

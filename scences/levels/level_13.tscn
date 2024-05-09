@@ -10,13 +10,20 @@
 [node name="level_13" type="Node2D"]
 
 [node name="SpawnPoint" parent="." instance=ExtResource("1_7kolp")]
-position = Vector2(78, 540)
+position = Vector2(1018, 152)
 
 [node name="Player" parent="." instance=ExtResource("2_rmp61")]
 position = Vector2(46, 571)
 
 [node name="Flag" parent="." instance=ExtResource("3_0vjms")]
-position = Vector2(106, 777)
+position = Vector2(-40, 85)
+split = false
+
+[node name="Flag2" parent="." node_paths=PackedStringArray("animator") instance=ExtResource("3_0vjms")]
+position = Vector2(1184, 92)
+animator = NodePath("../Flag/AnimatedSprite2D")
+split = false
+forward = false
 
 [node name="Walls" type="Node" parent="."]
 
@@ -25,51 +32,75 @@ position = Vector2(572.5, 633.551)
 scale = Vector2(61.1842, 2.5)
 
 [node name="LevelCreator2" parent="Walls" instance=ExtResource("4_26uyr")]
-position = Vector2(570.75, 16.0256)
-scale = Vector2(61.1842, 3.9973)
+position = Vector2(566.5, 16.0256)
+scale = Vector2(64.3684, 3.9973)
 
 [node name="LevelCreator3" parent="Walls" instance=ExtResource("4_26uyr")]
-position = Vector2(0.749985, 317.788)
+position = Vector2(0.749736, 386.454)
 rotation = 1.5708
-scale = Vector2(35.7571, 2.5)
+scale = Vector2(28.5291, 2.5)
 
 [node name="LevelCreator4" parent="Walls" instance=ExtResource("4_26uyr")]
-position = Vector2(1151.75, 317.695)
+position = Vector2(1151.75, 393.695)
 rotation = 1.5708
-scale = Vector2(35.7573, 2.5)
+scale = Vector2(27.7573, 2.5)
 
 [node name="Floor" type="Node" parent="."]
 
 [node name="LevelCreator5" parent="Floor" instance=ExtResource("4_26uyr")]
-position = Vector2(595.125, 425)
+position = Vector2(213.125, 406)
 scale = Vector2(12.2237, 2.5)
 
 [node name="Bounces" type="Node" parent="."]
 
 [node name="bounce pad" parent="Bounces" instance=ExtResource("5_6174g")]
-position = Vector2(204, 591)
+position = Vector2(669, 589)
 bounceBuffer = 100.0
 
 [node name="bounce pad2" parent="Bounces" instance=ExtResource("5_6174g")]
-position = Vector2(605.125, 381)
+position = Vector2(223.125, 362)
 bounceBuffer = 100.0
 
 [node name="Spikes" type="Node" parent="."]
 
 [node name="Spikes" parent="Spikes" instance=ExtResource("6_giv3i")]
-position = Vector2(288, 598)
+position = Vector2(753, 596)
 
 [node name="Spikes2" parent="Spikes" instance=ExtResource("6_giv3i")]
-position = Vector2(332, 598)
+position = Vector2(797, 596)
 
 [node name="Spikes3" parent="Spikes" instance=ExtResource("6_giv3i")]
-position = Vector2(360, 596)
+position = Vector2(825, 594)
 
 [node name="Spikes4" parent="Spikes" instance=ExtResource("6_giv3i")]
-position = Vector2(399, 599)
+position = Vector2(864, 597)
 
 [node name="Spikes5" parent="Spikes" instance=ExtResource("6_giv3i")]
-position = Vector2(443, 594)
+position = Vector2(913, 601)
 
 [node name="Spikes6" parent="Spikes" instance=ExtResource("6_giv3i")]
-position = Vector2(487, 597)
+position = Vector2(952, 595)
+
+[node name="Spikes7" parent="Spikes" instance=ExtResource("6_giv3i")]
+position = Vector2(198, 67)
+rotation = -3.14159
+
+[node name="Spikes8" parent="Spikes" instance=ExtResource("6_giv3i")]
+position = Vector2(242, 67)
+rotation = -3.14159
+
+[node name="Spikes9" parent="Spikes" instance=ExtResource("6_giv3i")]
+position = Vector2(270, 65)
+rotation = -3.14159
+
+[node name="Spikes10" parent="Spikes" instance=ExtResource("6_giv3i")]
+position = Vector2(309, 68)
+rotation = -3.14159
+
+[node name="Spikes11" parent="Spikes" instance=ExtResource("6_giv3i")]
+position = Vector2(359, 64)
+rotation = -3.14159
+
+[node name="Spikes12" parent="Spikes" instance=ExtResource("6_giv3i")]
+position = Vector2(397, 66)
+rotation = -3.14159
