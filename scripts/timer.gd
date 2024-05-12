@@ -64,6 +64,6 @@ func updateLevel(current : String, newLevel : bool, subLevel : String):
 		currentLevel.text = "Level: " + str(current)
 		return
 	else:
-		currentInt -= 12
-		currentLevel.text = "Level: 12 - " + str(currentInt) 
+
+		currentLevel.text = "Level: 12 - " + str(subLevel) 
 	

@@ -47,9 +47,10 @@ func change_level():
 	if split:
 		gameState.updateLevel(str(nextLevel), true, "")
 	else:
+		print(subLevel)
 		gameState.updateLevel("12", false, str(subLevel))
 
 func resetNextLvl(correctNextLvl):
-	nextLevel = correctNextLvl
-	print(nextLevel)
-	gameState.updateLevel(str(nextLevel), true, "")
+	print("test")
+	subLevel = 0
+	gameState.updateLevel("12", false, str(subLevel))
