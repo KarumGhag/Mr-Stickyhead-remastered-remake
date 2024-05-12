@@ -9,7 +9,7 @@ var splits : Array = []
 @export var totalTimeLabel : Label
 @export var currentTimeLabel : Label
 @export var splitsTimeLabel : Label
-
+@export var currentLevel : Label
 
 var timePassed : String = ""
 var currentPassed : String = ""
@@ -18,12 +18,14 @@ var savedTime : float
 var splitsTxt : String
 
 func _ready():
+	currentLevel.hide()
 	totalTimeLabel.hide()
 	currentTimeLabel.hide()
 	splitsTimeLabel.hide()
 
 func startTimer():
 	gameStarted = true
+	currentLevel.show()
 	totalTimeLabel.show()
 	currentTimeLabel.show()
 	splitsTimeLabel.show()
@@ -56,3 +58,8 @@ func saveTime():
 	splits.append(currentPassed)
 	splitsTxt += "|" + str(currentPassed) + "|"
 
+func updateLevel(current : String, newLevel : bool, subLevel : String):
+	if newLevel:
+		currentLevel.text = "Level: " + str(current)
+	else:
+		currentLevel.text = "Level: " + str(current) + " - " + subLevel

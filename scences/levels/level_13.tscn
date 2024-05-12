@@ -53,8 +53,8 @@ scale = Vector2(12.2237, 2.5)
 
 [node name="Bounces" type="Node" parent="."]
 
-[node name="bounce pad" parent="Bounces" instance=ExtResource("5_6174g")]
-position = Vector2(669, 589)
+[node name="bounce pad3" parent="Bounces" instance=ExtResource("5_6174g")]
+position = Vector2(642, 586)
 bounceBuffer = 100.0
 
 [node name="bounce pad2" parent="Bounces" instance=ExtResource("5_6174g")]
@@ -65,42 +65,54 @@ bounceBuffer = 100.0
 
 [node name="Spikes" parent="Spikes" instance=ExtResource("6_giv3i")]
 position = Vector2(753, 596)
+returnToStart = true
 
 [node name="Spikes2" parent="Spikes" instance=ExtResource("6_giv3i")]
 position = Vector2(797, 596)
+returnToStart = true
 
 [node name="Spikes3" parent="Spikes" instance=ExtResource("6_giv3i")]
 position = Vector2(825, 594)
+returnToStart = true
 
 [node name="Spikes4" parent="Spikes" instance=ExtResource("6_giv3i")]
 position = Vector2(864, 597)
+returnToStart = true
 
 [node name="Spikes5" parent="Spikes" instance=ExtResource("6_giv3i")]
 position = Vector2(913, 601)
+returnToStart = true
 
 [node name="Spikes6" parent="Spikes" instance=ExtResource("6_giv3i")]
 position = Vector2(952, 595)
+returnToStart = true
 
 [node name="Spikes7" parent="Spikes" instance=ExtResource("6_giv3i")]
 position = Vector2(198, 67)
 rotation = -3.14159
+returnToStart = true
 
 [node name="Spikes8" parent="Spikes" instance=ExtResource("6_giv3i")]
 position = Vector2(242, 67)
 rotation = -3.14159
+returnToStart = true
 
 [node name="Spikes9" parent="Spikes" instance=ExtResource("6_giv3i")]
 position = Vector2(270, 65)
 rotation = -3.14159
+returnToStart = true
 
 [node name="Spikes10" parent="Spikes" instance=ExtResource("6_giv3i")]
 position = Vector2(309, 68)
 rotation = -3.14159
+returnToStart = true
 
 [node name="Spikes11" parent="Spikes" instance=ExtResource("6_giv3i")]
 position = Vector2(359, 64)
 rotation = -3.14159
+returnToStart = true
 
 [node name="Spikes12" parent="Spikes" instance=ExtResource("6_giv3i")]
 position = Vector2(397, 66)
 rotation = -3.14159
+returnToStart = true

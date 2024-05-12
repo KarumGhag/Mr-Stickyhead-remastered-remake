@@ -2,11 +2,12 @@
 
 [ext_resource type="Script" path="res://scripts/timer.gd" id="1_t0btb"]
 
-[node name="Timer" type="Node2D" node_paths=PackedStringArray("totalTimeLabel", "currentTimeLabel", "splitsTimeLabel")]
+[node name="Timer" type="Node2D" node_paths=PackedStringArray("totalTimeLabel", "currentTimeLabel", "splitsTimeLabel", "currentLevel")]
 script = ExtResource("1_t0btb")
 totalTimeLabel = NodePath("CanvasLayer/totalTime")
 currentTimeLabel = NodePath("CanvasLayer/currentTime")
 splitsTimeLabel = NodePath("CanvasLayer/splitsTime")
+currentLevel = NodePath("CanvasLayer/currentLevel")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -22,8 +23,13 @@ offset_bottom = 23.0
 text = "Level Time:"
 
 [node name="splitsTime" type="Label" parent="CanvasLayer"]
-visible = false
 offset_top = 25.0
 offset_right = 51.0
 offset_bottom = 48.0
 text = "Splits: "
+
+[node name="currentLevel" type="Label" parent="CanvasLayer"]
+offset_left = 449.0
+offset_right = 507.0
+offset_bottom = 23.0
+text = "Level: 1"
