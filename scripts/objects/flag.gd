@@ -10,7 +10,7 @@ var levelName : String = "res://scences/levels/level_"
 
 @export var forward : bool = true
 
-var nextLevel
+var nextLevel : int
 @onready var gameState = get_node("/root/GlobalTimer")
 
 @export var player : CharacterBody2D
@@ -18,6 +18,7 @@ var spawnPoint : Node2D
 var endPoint : Node2D
 
 var subLevel : int = 0
+var currentScene
 
 func _ready():
 	animator.play("Flying")
@@ -35,7 +36,7 @@ func _on_area_2d_body_entered(body):
 		call_deferred("change_level")
 
 func change_level():
-	var currentScene = get_tree().current_scene.scene_file_path
+	currentScene = get_tree().current_scene.scene_file_path
 	if forward:
 		nextLevel = currentScene.to_int() + 1
 	else:
@@ -48,3 +49,7 @@ func change_level():
 	else:
 		gameState.updateLevel("12", false, str(subLevel))
 
+func resetNextLvl(correctNextLvl):
+	nextLevel = correctNextLvl
+	print(nextLevel)
+	gameState.updateLevel(str(nextLevel), true, "")

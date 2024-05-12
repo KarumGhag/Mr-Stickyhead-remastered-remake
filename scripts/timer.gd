@@ -59,7 +59,11 @@ func saveTime():
 	splitsTxt += "|" + str(currentPassed) + "|"
 
 func updateLevel(current : String, newLevel : bool, subLevel : String):
-	if newLevel:
+	var currentInt = int(current)
+	if currentInt < 12:
 		currentLevel.text = "Level: " + str(current)
+		return
 	else:
-		currentLevel.text = "Level: " + str(current) + " - " + subLevel
+		currentInt -= 12
+		currentLevel.text = "Level: 12 - " + str(currentInt) 
+	
