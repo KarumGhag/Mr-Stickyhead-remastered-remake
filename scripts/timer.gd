@@ -19,11 +19,15 @@ var splitsTxt : String
 
 var subLevel : int = 0
 
+var endPoint : Node2D
+var endPointPos : Vector2
+
 func _ready():
 	currentLevel.hide()
 	totalTimeLabel.hide()
 	currentTimeLabel.hide()
 	splitsTimeLabel.hide()
+	
 
 func startTimer():
 	gameStarted = true
@@ -61,15 +65,14 @@ func saveTime():
 	splitsTxt += "|" + str(currentPassed) + "|"
 
 func updateLevel(current : String, newLevel : bool, subLevel : String):
-	
 	var currentInt = int(current)
-	print(currentInt)
 	if currentInt < 12:
 		currentLevel.text = "Level: " + str(current)
 		return
 	else:
 		if subLevel == "" or subLevel == "0":
 			currentLevel.text = "Level: 12"
+			
 			return
 		currentLevel.text = "Level: 12 - " + str(subLevel) 
 		
@@ -78,3 +81,15 @@ func updateLevel(current : String, newLevel : bool, subLevel : String):
 func addSub():
 	subLevel += 1
 	return subLevel
+
+func updateEndPoint():
+	endPoint = get_tree().get_first_node_in_group("EndPoint")
+	if endPoint == null:
+		return Vector2.ZERO
+	endPointPos = endPoint.position
+	return endPointPos
+
+func playerToEnd(pos):
+	var player = get_tree().get_first_node_in_group("Player")
+	player.position = endPointPos
+	return

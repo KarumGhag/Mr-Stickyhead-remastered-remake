@@ -41,16 +41,16 @@ scale = Vector2(35.7573, 2.5)
 [node name="Floor" type="Node" parent="."]
 
 [node name="LevelCreator5" parent="Floor" instance=ExtResource("4_m4t67")]
-position = Vector2(141, 464)
+position = Vector2(80.5625, 427)
 scale = Vector2(2.26974, 1.09211)
 
 [node name="LevelCreator6" parent="Floor" instance=ExtResource("4_m4t67")]
-position = Vector2(230.563, 304)
+position = Vector2(254.563, 267)
 scale = Vector2(2.26974, 1.09211)
 
 [node name="LevelCreator7" parent="Floor" instance=ExtResource("4_m4t67")]
-position = Vector2(301.563, 228)
-scale = Vector2(2.26974, 1.09211)
+position = Vector2(667, 232)
+scale = Vector2(19.1579, 1.09211)
 
 [node name="LevelCreator8" parent="Floor" instance=ExtResource("4_m4t67")]
 position = Vector2(754, 101)
@@ -68,13 +68,26 @@ position = Vector2(294, 788)
 [node name="Spikes" type="Node" parent="."]
 
 [node name="Spikes" parent="Spikes" instance=ExtResource("6_j8doy")]
-position = Vector2(142, 437)
+position = Vector2(81.5625, 400)
 
 [node name="Spikes2" parent="Spikes" instance=ExtResource("6_j8doy")]
-position = Vector2(231.563, 277)
+position = Vector2(255.563, 240)
 
 [node name="Spikes3" parent="Spikes" instance=ExtResource("6_j8doy")]
-position = Vector2(301.563, 202)
+position = Vector2(506.563, 206)
+
+[node name="Spikes6" parent="Spikes" instance=ExtResource("6_j8doy")]
+position = Vector2(665, 117)
+rotation = 3.14159
+
+[node name="Spikes7" parent="Spikes" instance=ExtResource("6_j8doy")]
+position = Vector2(596, 219)
+
+[node name="Spikes8" parent="Spikes" instance=ExtResource("6_j8doy")]
+position = Vector2(741, 222)
+
+[node name="Spikes5" parent="Spikes" instance=ExtResource("6_j8doy")]
+position = Vector2(826, 208)
 
 [node name="Spikes4" parent="Spikes" instance=ExtResource("6_j8doy")]
 position = Vector2(385.563, 78)

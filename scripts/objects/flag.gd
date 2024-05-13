@@ -16,6 +16,7 @@ var nextLevel : int
 @export var player : CharacterBody2D
 var spawnPoint : Node2D
 var endPoint : Node2D
+var endPointPos : Vector2 = Vector2.ZERO
 
 var subLevel : int = 0
 var currentScene
@@ -39,16 +40,20 @@ func _on_area_2d_body_entered(body):
 func change_level():
 	currentScene = get_tree().current_scene.scene_file_path
 	if forward:
+		endPointPos = gameState.updateEndPoint()
 		nextLevel = currentScene.to_int() + 1
 	else:
 		nextLevel = currentScene.to_int() - 1
 	var nextLevelPath = levelName + str(nextLevel) + ".tscn"
 	get_tree().change_scene_to_file(nextLevelPath)
+	if not forward:
+		gameState.playerToEnd(endPointPos)
+		print("back")
+	
 	
 	if split:
 		gameState.updateLevel(str(nextLevel), true, "")
 	else:
-		
 		gameState.updateLevel("12", false, str(subLevel))
 
 func resetNextLvl(correctNextLvl):

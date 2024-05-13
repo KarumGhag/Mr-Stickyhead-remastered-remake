@@ -78,22 +78,22 @@ position = Vector2(295, 381)
 rotation = 3.14159
 
 [node name="Spikes2" parent="Spikes" instance=ExtResource("6_wjuwa")]
-position = Vector2(318, 186)
+position = Vector2(315, 175)
 rotation = 3.14159
 
 [node name="Spikes3" parent="Spikes" instance=ExtResource("6_wjuwa")]
-position = Vector2(351, 184)
+position = Vector2(348, 173)
 rotation = 3.14159
 
 [node name="Spikes4" parent="Spikes" instance=ExtResource("6_wjuwa")]
-position = Vector2(385, 186)
+position = Vector2(382, 175)
 rotation = 3.14159
 
 [node name="Spikes7" parent="Spikes" instance=ExtResource("6_wjuwa")]
-position = Vector2(557, 305)
+position = Vector2(556, 313)
 
 [node name="Spikes8" parent="Spikes" instance=ExtResource("6_wjuwa")]
-position = Vector2(591, 307)
+position = Vector2(590, 315)
 
 [node name="Spikes12" parent="Spikes" instance=ExtResource("6_wjuwa")]
 position = Vector2(840, 605)
@@ -106,12 +106,6 @@ position = Vector2(794, 122)
 
 [node name="Spikes22" parent="Spikes" instance=ExtResource("6_wjuwa")]
 position = Vector2(834, 120)
-
-[node name="Spikes23" parent="Spikes" instance=ExtResource("6_wjuwa")]
-position = Vector2(641, 126)
-
-[node name="Spikes24" parent="Spikes" instance=ExtResource("6_wjuwa")]
-position = Vector2(681, 124)
 
 [node name="Spikes25" parent="Spikes" instance=ExtResource("6_wjuwa")]
 position = Vector2(465, 126)
@@ -142,29 +136,21 @@ position = Vector2(355, 44)
 rotation = 3.14159
 
 [node name="Spikes33" parent="Spikes" instance=ExtResource("6_wjuwa")]
-position = Vector2(1058, 58)
+position = Vector2(1042, 54)
 rotation = 3.14159
 
 [node name="Spikes34" parent="Spikes" instance=ExtResource("6_wjuwa")]
-position = Vector2(1098, 56)
-rotation = 3.14159
-
-[node name="Spikes35" parent="Spikes" instance=ExtResource("6_wjuwa")]
-position = Vector2(566, 49)
-rotation = 3.14159
-
-[node name="Spikes36" parent="Spikes" instance=ExtResource("6_wjuwa")]
-position = Vector2(584, 49)
+position = Vector2(1082, 52)
 rotation = 3.14159
 
 [node name="Spikes14" parent="Spikes" instance=ExtResource("6_wjuwa")]
-position = Vector2(507, 600)
+position = Vector2(565, 600)
 
 [node name="Spikes15" parent="Spikes" instance=ExtResource("6_wjuwa")]
-position = Vector2(540, 598)
+position = Vector2(598, 598)
 
 [node name="Spikes16" parent="Spikes" instance=ExtResource("6_wjuwa")]
-position = Vector2(574, 600)
+position = Vector2(632, 600)
 
 [node name="Spikes17" parent="Spikes" instance=ExtResource("6_wjuwa")]
-position = Vector2(614, 598)
+position = Vector2(672, 598)

@@ -71,7 +71,7 @@ scale = Vector2(18.5855, 1.51316)
 
 [node name="LevelCreator15" parent="Floor" instance=ExtResource("4_nxwcm")]
 position = Vector2(862, 459.188)
-scale = Vector2(0.894736, 0.86184)
+scale = Vector2(1.47368, 0.86184)
 
 [node name="LevelCreator12" parent="Floor" instance=ExtResource("4_nxwcm")]
 position = Vector2(905, 382)

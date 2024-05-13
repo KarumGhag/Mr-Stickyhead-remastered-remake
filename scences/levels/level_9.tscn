@@ -106,11 +106,11 @@ position = Vector2(676, 102)
 rotation = -9.42476
 
 [node name="Spikes51" parent="Spikes" instance=ExtResource("6_k6obb")]
-position = Vector2(183, 109)
+position = Vector2(189, 100)
 rotation = -3.14159
 
 [node name="Spikes52" parent="Spikes" instance=ExtResource("6_k6obb")]
-position = Vector2(286, 111)
+position = Vector2(318, 101)
 rotation = -3.14159
 
 [node name="Spikes9" parent="Spikes" instance=ExtResource("6_k6obb")]

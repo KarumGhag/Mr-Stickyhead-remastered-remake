@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://df232bf0vg8oy"]
+
+[node name="endPoint" type="Node2D" groups=["EndPoint"]]
+position = Vector2(60, 326)
