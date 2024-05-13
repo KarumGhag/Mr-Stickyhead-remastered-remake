@@ -32,7 +32,8 @@ func _on_area_2d_body_entered(body):
 		if split:
 			globalTimer.saveTime()
 		else:
-			subLevel += 1
+			subLevel = gameState.addSub()
+			gameState.updateLevel("12", false, str(subLevel))
 		call_deferred("change_level")
 
 func change_level():
@@ -47,10 +48,9 @@ func change_level():
 	if split:
 		gameState.updateLevel(str(nextLevel), true, "")
 	else:
-		print(subLevel)
+		
 		gameState.updateLevel("12", false, str(subLevel))
 
 func resetNextLvl(correctNextLvl):
-	print("test")
 	subLevel = 0
 	gameState.updateLevel("12", false, str(subLevel))

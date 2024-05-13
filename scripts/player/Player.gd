@@ -30,12 +30,16 @@ var canCayote : bool = false
 
 @export var bounceVel : float = jumpPower * 1.3
 
+#remove:
+var flag : Flag
 
 
 func _ready():
 	spawnPoint = get_tree().get_first_node_in_group("SpawnPoint")
 	global_position = spawnPoint.position
 	globalTimer.startTimer()
+	#remove:
+	flag = get_tree().get_first_node_in_group("Flag")
 	
 func _physics_process(delta):
 	
@@ -86,7 +90,7 @@ func _physics_process(delta):
 		
 		velocity.y = jumpPower - (abs(velocity.x) / 9)
 		
-
+	
 	
 	if velocity.y < 0 and Input.is_action_just_released("jump"):
 		velocity.y /= 1.5
@@ -99,7 +103,9 @@ func _physics_process(delta):
 
 	move_and_slide()
 	
-
+	#remove:
+	if Input.is_action_just_pressed("skip(remove)"):
+		position = flag.position
 
 func _on_stick_timer_timeout():
 	stuck = false

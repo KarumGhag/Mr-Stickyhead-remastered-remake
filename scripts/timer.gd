@@ -17,6 +17,8 @@ var currentPassed : String = ""
 var savedTime : float
 var splitsTxt : String
 
+var subLevel : int = 0
+
 func _ready():
 	currentLevel.hide()
 	totalTimeLabel.hide()
@@ -59,11 +61,20 @@ func saveTime():
 	splitsTxt += "|" + str(currentPassed) + "|"
 
 func updateLevel(current : String, newLevel : bool, subLevel : String):
+	
 	var currentInt = int(current)
+	print(currentInt)
 	if currentInt < 12:
 		currentLevel.text = "Level: " + str(current)
 		return
 	else:
-
+		if subLevel == "" or subLevel == "0":
+			currentLevel.text = "Level: 12"
+			return
 		currentLevel.text = "Level: 12 - " + str(subLevel) 
+		
+			
 	
+func addSub():
+	subLevel += 1
+	return subLevel
