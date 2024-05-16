@@ -10,6 +10,9 @@
 
 [node name="level_12" type="Node2D"]
 
+[node name="Camera2D" type="Camera2D" parent="." groups=["Camera"]]
+position = Vector2(-1759, 1332)
+
 [node name="endPoint" parent="." instance=ExtResource("1_m0cpa")]
 
 [node name="SpawnPoint" parent="." instance=ExtResource("1_mkobt")]
@@ -18,18 +21,72 @@ position = Vector2(97, 516)
 [node name="Player" parent="." instance=ExtResource("2_6bjqr")]
 position = Vector2(90, 590)
 
-[node name="Camera2D" type="Camera2D" parent="." groups=["Camera"]]
-position = Vector2(576, 332)
+[node name="Camera Mover" type="Node3D" parent="."]
+
+[node name="camera mover" parent="Camera Mover" node_paths=PackedStringArray("myCentre") instance=ExtResource("8_e8qtg")]
+visible = false
+position = Vector2(-5, 5)
+myCentre = NodePath("../Node2D")
+
+[node name="camera mover2" parent="Camera Mover" node_paths=PackedStringArray("myCentre") instance=ExtResource("8_e8qtg")]
+visible = false
+position = Vector2(-1149, 10)
+myCentre = NodePath("../Node2D2")
+myNumber = 1
+
+[node name="camera mover3" parent="Camera Mover" node_paths=PackedStringArray("myCentre") instance=ExtResource("8_e8qtg")]
+visible = false
+position = Vector2(-2293, 338)
+myCentre = NodePath("../Node2D3")
+myNumber = 2
+
+[node name="camera mover4" parent="Camera Mover" node_paths=PackedStringArray("myCentre") instance=ExtResource("8_e8qtg")]
+visible = false
+position = Vector2(-2308, 974)
+myCentre = NodePath("../Node2D4")
+myNumber = 2
+
+[node name="Node2D" type="Node2D" parent="Camera Mover"]
+position = Vector2(574, 317)
+
+[node name="Node2D2" type="Node2D" parent="Camera Mover"]
+position = Vector2(-559, 319)
+
+[node name="Node2D3" type="Node2D" parent="Camera Mover"]
+position = Vector2(-1664, 628)
+
+[node name="Node2D4" type="Node2D" parent="Camera Mover"]
+position = Vector2(-1760, 1332)
 
 [node name="Walls" type="Node" parent="."]
 
 [node name="LevelCreator" parent="Walls" instance=ExtResource("4_pbspg")]
-position = Vector2(572.5, 633.551)
-scale = Vector2(61.1842, 2.5)
+position = Vector2(-171.125, 633.551)
+scale = Vector2(139.461, 2.5)
+
+[node name="LevelCreator8" parent="Walls" instance=ExtResource("4_pbspg")]
+position = Vector2(-1752, 322.625)
+scale = Vector2(68.9408, 5.30263)
+
+[node name="LevelCreator10" parent="Walls" instance=ExtResource("4_pbspg")]
+position = Vector2(-1433.03, 979.687)
+scale = Vector2(45.8914, 4.49342)
+
+[node name="LevelCreator13" parent="Walls" instance=ExtResource("4_pbspg")]
+position = Vector2(-2108.48, 975.688)
+scale = Vector2(12.051, 3.86185)
+
+[node name="LevelCreator16" parent="Walls" instance=ExtResource("4_pbspg")]
+position = Vector2(-1931, 1539)
+scale = Vector2(12.051, 3.86185)
+
+[node name="LevelCreator11" parent="Walls" instance=ExtResource("4_pbspg")]
+position = Vector2(-1576, 667.813)
+scale = Vector2(28.1546, 1.91448)
 
 [node name="LevelCreator2" parent="Walls" instance=ExtResource("4_pbspg")]
-position = Vector2(570.75, 16.0256)
-scale = Vector2(61.1842, 3.9973)
+position = Vector2(8.49989, 16.0256)
+scale = Vector2(120.368, 3.9973)
 
 [node name="LevelCreator3" parent="Walls" instance=ExtResource("4_pbspg")]
 position = Vector2(0.749204, 533.513)
@@ -40,6 +97,31 @@ scale = Vector2(13.0491, 2.5)
 position = Vector2(1.99996, 151.801)
 rotation = 1.5708
 scale = Vector2(18.3167, 2.5)
+
+[node name="LevelCreator6" parent="Walls" instance=ExtResource("4_pbspg")]
+position = Vector2(-1110, 252)
+rotation = 1.5708
+scale = Vector2(26.1149, 2.5)
+
+[node name="LevelCreator9" parent="Walls" instance=ExtResource("4_pbspg")]
+position = Vector2(-2221, 657.058)
+rotation = 1.5708
+scale = Vector2(36.7526, 2.5)
+
+[node name="LevelCreator14" parent="Walls" instance=ExtResource("4_pbspg")]
+position = Vector2(-2017, 1254.45)
+rotation = 1.5708
+scale = Vector2(32.0633, 2.5)
+
+[node name="LevelCreator15" parent="Walls" instance=ExtResource("4_pbspg")]
+position = Vector2(-1844, 1261.03)
+rotation = 1.5708
+scale = Vector2(30.277, 2.5)
+
+[node name="LevelCreator7" parent="Walls" instance=ExtResource("4_pbspg")]
+position = Vector2(-984, 531.948)
+rotation = 1.5708
+scale = Vector2(11.594, 2.5)
 
 [node name="LevelCreator4" parent="Walls" instance=ExtResource("4_pbspg")]
 position = Vector2(1151.75, 317.695)
@@ -69,8 +151,8 @@ position = Vector2(1126, 94)
 scale = Vector2(2.02633, 0.513158)
 
 [node name="LevelCreator8" parent="Floor" instance=ExtResource("4_pbspg")]
-position = Vector2(-180.75, 426)
-scale = Vector2(41.7105, 1.72368)
+position = Vector2(-72.75, 426)
+scale = Vector2(30.3421, 1.72368)
 
 [node name="LevelCreator6" parent="Floor" instance=ExtResource("4_pbspg")]
 position = Vector2(193, 284.847)
@@ -95,6 +177,15 @@ position = Vector2(530, 586)
 [node name="bounce pad2" parent="Bounces" instance=ExtResource("5_6wtx7")]
 position = Vector2(895, 591)
 bounceBuffer = 60.0
+
+[node name="bounce pad3" parent="Bounces" instance=ExtResource("5_6wtx7")]
+position = Vector2(-341, 270)
+rotation = -1.57079
+isLeft = true
+
+[node name="bounce pad5" parent="Bounces" instance=ExtResource("5_6wtx7")]
+position = Vector2(-1931, 1480)
+rotation = -6.28318
 
 [node name="Spikes" type="Node" parent="."]
 
@@ -137,6 +228,74 @@ rotation = -6.28318
 position = Vector2(96, 397)
 rotation = -6.28318
 
+[node name="Spikes16" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-223, 598)
+rotation = -6.28318
+
+[node name="Spikes17" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-266, 601)
+rotation = -6.28318
+
+[node name="Spikes18" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-314, 598)
+rotation = -6.28318
+
+[node name="Spikes19" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-380, 597)
+rotation = -6.28318
+
+[node name="Spikes20" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-462, 600)
+rotation = -6.28318
+
+[node name="Spikes21" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-547, 599)
+rotation = -6.28318
+
+[node name="Spikes22" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-652, 600)
+rotation = -6.28318
+
+[node name="Spikes26" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-710, 599)
+rotation = -6.28318
+
+[node name="Spikes27" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-816, 606)
+rotation = -6.28318
+
+[node name="Spikes28" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-603, 605)
+rotation = -6.28318
+
+[node name="Spikes29" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-507, 599)
+rotation = -6.28318
+
+[node name="Spikes30" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-180, 599)
+rotation = -6.28318
+
+[node name="Spikes31" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-131, 595)
+rotation = -6.28318
+
+[node name="Spikes32" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-79, 599)
+rotation = -6.28318
+
+[node name="Spikes33" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-852, 603)
+rotation = -6.28318
+
+[node name="Spikes23" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-760, 599)
+rotation = -6.28318
+
+[node name="Spikes24" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-887, 606)
+rotation = -6.28318
+
 [node name="Spikes3" parent="Spikes" instance=ExtResource("6_vswi2")]
 position = Vector2(196, 602)
 
@@ -147,19 +306,135 @@ position = Vector2(307, 603)
 position = Vector2(619, 178)
 rotation = 3.14159
 
-[node name="Camera Mover" type="Node3D" parent="."]
+[node name="Spikes25" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-906, 596)
 
-[node name="camera mover" parent="Camera Mover" node_paths=PackedStringArray("myCentre") instance=ExtResource("8_e8qtg")]
-position = Vector2(-5, 5)
-myCentre = NodePath("../Node2D")
+[node name="Spikes34" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-945, 595)
 
-[node name="camera mover2" parent="Camera Mover" node_paths=PackedStringArray("myCentre") instance=ExtResource("8_e8qtg")]
-position = Vector2(-1149, 10)
-myCentre = NodePath("../Node2D2")
-myNumber = 1
+[node name="Spikes35" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-1338, 640)
+rotation = -6.28318
 
-[node name="Node2D" type="Node2D" parent="Camera Mover"]
-position = Vector2(577, 334)
+[node name="Spikes36" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-1423, 639)
+rotation = -6.28318
 
-[node name="Node2D2" type="Node2D" parent="Camera Mover"]
-position = Vector2(-589, 340)
+[node name="Spikes37" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-1528, 640)
+rotation = -6.28318
+
+[node name="Spikes38" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-1586, 639)
+rotation = -6.28318
+
+[node name="Spikes39" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-1692, 646)
+rotation = -6.28318
+
+[node name="Spikes40" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-1479, 645)
+rotation = -6.28318
+
+[node name="Spikes41" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-1383, 639)
+rotation = -6.28318
+
+[node name="Spikes42" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-1728, 643)
+rotation = -6.28318
+
+[node name="Spikes43" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-1636, 639)
+rotation = -6.28318
+
+[node name="Spikes44" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-1763, 646)
+rotation = -6.28318
+
+[node name="Spikes45" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-1782, 636)
+
+[node name="Spikes46" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-1821, 635)
+
+[node name="Spikes52" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-2056, 938)
+rotation = -6.28318
+
+[node name="Spikes53" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-2092, 935)
+rotation = -6.28318
+
+[node name="Spikes54" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-2017, 926)
+rotation = -6.28318
+
+[node name="Spikes55" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-2127, 938)
+rotation = -6.28318
+
+[node name="Spikes56" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-2146, 928)
+
+[node name="Spikes57" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-2185, 927)
+
+[node name="Spikes58" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-1346, 930)
+rotation = -6.28318
+
+[node name="Spikes59" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-1452, 937)
+rotation = -6.28318
+
+[node name="Spikes60" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-1488, 934)
+rotation = -6.28318
+
+[node name="Spikes61" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-1396, 930)
+rotation = -6.28318
+
+[node name="Spikes62" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-1523, 937)
+rotation = -6.28318
+
+[node name="Spikes63" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-1549, 936)
+
+[node name="Spikes65" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-1841, 933)
+rotation = -6.28318
+
+[node name="Spikes66" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-1583, 935)
+rotation = -6.28318
+
+[node name="Spikes67" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-1677, 939)
+rotation = -6.28318
+
+[node name="Spikes68" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-1713, 936)
+rotation = -6.28318
+
+[node name="Spikes69" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-1630, 936)
+rotation = -6.28318
+
+[node name="Spikes70" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-1748, 939)
+rotation = -6.28318
+
+[node name="Spikes71" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-1767, 929)
+
+[node name="Spikes72" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-1806, 928)
+
+[node name="Spikes48" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-1979, 1507)
+
+[node name="Spikes49" parent="Spikes" instance=ExtResource("6_vswi2")]
+position = Vector2(-1882, 1508)

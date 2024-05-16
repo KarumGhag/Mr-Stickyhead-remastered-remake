@@ -105,7 +105,7 @@ func _physics_process(delta):
 	
 	#remove:
 	if Input.is_action_just_pressed("skip(remove)"):
-		position = flag.position
+		position = get_global_mouse_position()
 
 func _on_stick_timer_timeout():
 	stuck = false
@@ -114,12 +114,26 @@ func kill():
 	global_position = spawnPoint.global_position
 
 func bounce(bounceBuffer : float):
-
 	if velocity.y > 10:
 		velocity.y = ((velocity.y / 1.19) * -1) + (bounceVel / 2) - (abs(velocity.x / 2)) + bounceBuffer
-		
 		return
 	else:
 		velocity.y = bounceVel - (abs(velocity.x / 2)) + bounceBuffer
 
+func sideBounce(isLeft : bool, isRight : bool, sideBuffer : float, bounceBuffer : float):
+	if isLeft and isRight:
+		print("cannot be left and right!")
+		return
 	
+	if isLeft:
+		if abs(velocity.x) < 200:
+			velocity.x = abs(velocity.x + bounceVel - sideBuffer) * -1
+		else:
+			velocity.x = abs(velocity.x + bounceVel * 1.5 - sideBuffer) * -1
+			
+	if isRight:
+		if abs(velocity.x) < 200:
+			velocity.x = abs(velocity.x + bounceVel - sideBuffer)
+		else:
+			velocity.x = abs(velocity.x + bounceVel * 1.5 - sideBuffer)
+
