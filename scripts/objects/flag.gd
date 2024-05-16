@@ -40,15 +40,19 @@ func _on_area_2d_body_entered(body):
 func change_level():
 	currentScene = get_tree().current_scene.scene_file_path
 	if forward:
-		endPointPos = gameState.updateEndPoint()
 		nextLevel = currentScene.to_int() + 1
 	else:
 		nextLevel = currentScene.to_int() - 1
+		
 	var nextLevelPath = levelName + str(nextLevel) + ".tscn"
+	gameState.updateEndPoint()
+	
+	print(get_tree().current_scene.scene_file_path)
 	get_tree().change_scene_to_file(nextLevelPath)
-	if not forward:
-		gameState.playerToEnd(endPointPos)
-		print("back")
+	
+	
+	
+
 	
 	
 	if split:

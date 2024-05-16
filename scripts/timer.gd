@@ -83,13 +83,27 @@ func addSub():
 	return subLevel
 
 func updateEndPoint():
+	var endPoints : Array = []
+	var levels : Array = [0]
+	
 	endPoint = get_tree().get_first_node_in_group("EndPoint")
 	if endPoint == null:
-		return Vector2.ZERO
-	endPointPos = endPoint.position
-	return endPointPos
+		return
+	endPoints.append(endPoint.global_position)
+	if len(levels) > 0:
+		levels.append(levels[len(levels) - 1] + 1)
+	print(endPoints)
+	print(levels)
 
-func playerToEnd(pos):
-	var player = get_tree().get_first_node_in_group("Player")
-	player.position = endPointPos
-	return
+func playerToEnd(pos, player):
+	pass
+	
+func toggleBack():
+	pass
+	
+func changeCurrent(level : int):
+	if level == 0:
+		currentLevel.text = "Level 12"
+	else:
+		currentLevel.text =  "Level 12 - " + str(level)
+	

@@ -3,10 +3,10 @@
 [ext_resource type="PackedScene" uid="uid://df232bf0vg8oy" path="res://scences/levels/end_point.tscn" id="1_m0cpa"]
 [ext_resource type="PackedScene" uid="uid://0uetm0qvivg1" path="res://scences/spawn_point.tscn" id="1_mkobt"]
 [ext_resource type="PackedScene" uid="uid://cw1ck5107083a" path="res://scences/player.tscn" id="2_6bjqr"]
-[ext_resource type="PackedScene" uid="uid://bxaiavlxnib70" path="res://scences/objects/flag.tscn" id="3_v6nbh"]
 [ext_resource type="PackedScene" uid="uid://cbqhhnvy7d76v" path="res://scences/levels/level_creator.tscn" id="4_pbspg"]
 [ext_resource type="PackedScene" uid="uid://iw3e4f4utkm2" path="res://scences/objects/bounce_pad.tscn" id="5_6wtx7"]
 [ext_resource type="PackedScene" uid="uid://h48gs52i84ga" path="res://scences/objects/spikes.tscn" id="6_vswi2"]
+[ext_resource type="PackedScene" uid="uid://b3aynexekuyti" path="res://scences/objects/camera_mover.tscn" id="8_e8qtg"]
 
 [node name="level_12" type="Node2D"]
 
@@ -18,9 +18,8 @@ position = Vector2(97, 516)
 [node name="Player" parent="." instance=ExtResource("2_6bjqr")]
 position = Vector2(90, 590)
 
-[node name="Flag" parent="." instance=ExtResource("3_v6nbh")]
-position = Vector2(-35, 367)
-split = false
+[node name="Camera2D" type="Camera2D" parent="." groups=["Camera"]]
+position = Vector2(576, 332)
 
 [node name="Walls" type="Node" parent="."]
 
@@ -70,8 +69,8 @@ position = Vector2(1126, 94)
 scale = Vector2(2.02633, 0.513158)
 
 [node name="LevelCreator8" parent="Floor" instance=ExtResource("4_pbspg")]
-position = Vector2(100, 426)
-scale = Vector2(12.1579, 1.72368)
+position = Vector2(-180.75, 426)
+scale = Vector2(41.7105, 1.72368)
 
 [node name="LevelCreator6" parent="Floor" instance=ExtResource("4_pbspg")]
 position = Vector2(193, 284.847)
@@ -101,62 +100,66 @@ bounceBuffer = 60.0
 
 [node name="Spikes2" parent="Spikes" instance=ExtResource("6_vswi2")]
 position = Vector2(426, 607)
-returnToStart = false
 
 [node name="Spikes6" parent="Spikes" instance=ExtResource("6_vswi2")]
 position = Vector2(521, 184)
 rotation = -3.14159
-returnToStart = false
 
 [node name="Spikes7" parent="Spikes" instance=ExtResource("6_vswi2")]
 position = Vector2(704, 180)
 rotation = -3.14159
-returnToStart = false
 
 [node name="Spikes8" parent="Spikes" instance=ExtResource("6_vswi2")]
 position = Vector2(813, 169)
 rotation = -3.14159
-returnToStart = false
 
 [node name="Spikes9" parent="Spikes" instance=ExtResource("6_vswi2")]
 position = Vector2(958, 168)
 rotation = -3.14159
-returnToStart = false
 
 [node name="Spikes10" parent="Spikes" instance=ExtResource("6_vswi2")]
 position = Vector2(881, 172)
 rotation = -3.14159
-returnToStart = false
 
 [node name="Spikes11" parent="Spikes" instance=ExtResource("6_vswi2")]
 position = Vector2(744, 127)
 rotation = -6.28318
-returnToStart = false
 
 [node name="Spikes12" parent="Spikes" instance=ExtResource("6_vswi2")]
 position = Vector2(407, 126)
 rotation = -6.28318
-returnToStart = false
 
 [node name="Spikes13" parent="Spikes" instance=ExtResource("6_vswi2")]
 position = Vector2(135, 396)
 rotation = -6.28318
-returnToStart = false
 
 [node name="Spikes14" parent="Spikes" instance=ExtResource("6_vswi2")]
 position = Vector2(96, 397)
 rotation = -6.28318
-returnToStart = false
 
 [node name="Spikes3" parent="Spikes" instance=ExtResource("6_vswi2")]
 position = Vector2(196, 602)
-returnToStart = false
 
 [node name="Spikes4" parent="Spikes" instance=ExtResource("6_vswi2")]
 position = Vector2(307, 603)
-returnToStart = false
 
 [node name="Spikes5" parent="Spikes" instance=ExtResource("6_vswi2")]
 position = Vector2(619, 178)
 rotation = 3.14159
-returnToStart = false
+
+[node name="Camera Mover" type="Node3D" parent="."]
+
+[node name="camera mover" parent="Camera Mover" node_paths=PackedStringArray("myCentre") instance=ExtResource("8_e8qtg")]
+position = Vector2(-5, 5)
+myCentre = NodePath("../Node2D")
+
+[node name="camera mover2" parent="Camera Mover" node_paths=PackedStringArray("myCentre") instance=ExtResource("8_e8qtg")]
+position = Vector2(-1149, 10)
+myCentre = NodePath("../Node2D2")
+myNumber = 1
+
+[node name="Node2D" type="Node2D" parent="Camera Mover"]
+position = Vector2(577, 334)
+
+[node name="Node2D2" type="Node2D" parent="Camera Mover"]
+position = Vector2(-589, 340)
