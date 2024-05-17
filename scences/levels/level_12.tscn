@@ -20,6 +20,7 @@ position = Vector2(97, 516)
 
 [node name="Player" parent="." instance=ExtResource("2_6bjqr")]
 position = Vector2(90, 590)
+acceleration = 25.0
 
 [node name="Camera Mover" type="Node3D" parent="."]
 

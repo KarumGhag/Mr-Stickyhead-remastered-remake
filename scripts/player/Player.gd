@@ -1,16 +1,16 @@
 extends CharacterBody2D
 class_name Player
 
-@export var speed : float = 300
-@export var jumpPower : float = -470
-@export var defaultGravity : float = 500
+@export var speed : float = 330
+@export var jumpPower : float = -500
+@export var defaultGravity : float = 530
 var gravity : float = defaultGravity
 
-@export var acceleration : float = 15
-@export var defaultFriction : float = 10
+@export var acceleration : float = 25
+@export var defaultFriction : float = 17
 var friction : float = defaultFriction
 
-@export var stickTime : float = 3
+@export var stickTime : float = 1
 @export var stickTimer : Timer
 var stuck : bool = false
 
